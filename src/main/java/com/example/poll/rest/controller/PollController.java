@@ -7,7 +7,6 @@ import com.example.poll.rest.request.PollRequest;
 import com.example.poll.rest.response.PollResponse;
 import com.example.poll.service.PollService;
 import com.querydsl.core.types.Predicate;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.AllArgsConstructor;
