@@ -31,10 +31,8 @@ public class PollServiceImpl implements PollService {
 
     @Override
     public Page<PollResponse> getAll(Predicate predicate, Pageable pageable) {
-        if(predicate == null) {
-            return conversionService.convertToPage(pageable, pollRepository.findAll(pageable), PollResponse.class);
-        }
-        return conversionService.convertToPage(pageable, pollRepository.findAll(predicate, pageable), PollResponse.class);
+        return predicate != null ? conversionService.convertToPage(pageable, pollRepository.findAll(predicate, pageable), PollResponse.class) :
+                conversionService.convertToPage(pageable, pollRepository.findAll(pageable), PollResponse.class);
     }
 
     @Override
