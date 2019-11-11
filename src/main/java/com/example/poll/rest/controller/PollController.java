@@ -25,8 +25,8 @@ public class PollController extends BaseController{
 
     @GetMapping
     @ApiPageable
-    @ApiOperation(value = "Получение списка опросов", notes = "Для фильтрации отправить запрос с подобными параметрами " +
-            "?size=10&page=0&sort=endDate%2Casc&sort=startDate%2Casc&name=Second&isActivity=true")
+    @ApiOperation(value = "Получение списка опросов", notes = "Для фильтрации, сортировки и пагинации отправить запрос с подобными параметрами " +
+            "?size=10&page=0&sort=endDate%2Casc&sort=startDate%2Casc&name=Second&isActivity=true&startDate=2019-11-11")
     public BaseResponse<List<PollResponse>> getAll(
             @QuerydslPredicate(root = Poll.class) Predicate predicate, Pageable pageable) {
         return new BaseResponse<>(pollService.getAll(predicate, pageable).getContent());
