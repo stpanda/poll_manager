@@ -1,8 +1,7 @@
 # poll_manager
 
-Проверить API http://ec2-18-223-1-160.us-east-2.compute.amazonaws.com:5010/swagger-ui.html#/
 
-Можно склонировать проект и развернуть локально. Необходимо поменять в application.yml 
+Cклонировать проект и развернуть локально. Необходимо поменять в application.yml 
 datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     
